@@ -8,22 +8,20 @@
 </head>
 <body>
 <%
-
 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 response.setHeader("Pragma", "no-cache");
 response.setHeader("Expires","0");
-
 if(session.getAttribute("username")==null)
 {
 	response.sendRedirect("login.jsp");
 }
 %>
-welcome ${username}
-<a href="videos.jsp">videos here</a>
-<br>
-<a href="Index.jsp">data here</a>
-<form action="Logout">
-<input type="submit" value="Logout">
+<form action="Search">
+
+Enter your Name: <input type="text" name="uname"/><br/>
+
+<input type="submit" value="search"/>
+
 </form>
 </body>
 </html>
